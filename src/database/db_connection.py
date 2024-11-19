@@ -2,11 +2,11 @@ import pyodbc
 
 class SqlConnection:
     
-    def __init__(self, database):
-        self.server = '172.28.16.1'
+    def __init__(self, server, username, password, database):
+        self.server = server
         self.database = database
-        self.username = 'ivan_florez_2'
-        self.password = '6D6a2357.1152'
+        self.username = username
+        self.password = password
         self.connection_string = (
             f"DRIVER={{ODBC Driver 17 for SQL Server}};SERVER={self.server};"
             f"DATABASE={self.database};UID={self.username};PWD={self.password};"
